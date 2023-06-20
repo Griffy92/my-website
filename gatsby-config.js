@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `my-portfolio`,
+    title: `Dominic Wong`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: ["gatsby-plugin-sass"]
