@@ -1,7 +1,8 @@
 import * as React from "react";
 import '../styles/index.scss';
 import lighthouse from '../images/moonrise-kingdom.jpg';
-import Intro from '../components/intro/intro'
+import Intro from '../components/intro'
+import Portfolio from '../components/portfolio'
  
 const IndexPage = () => {
 
@@ -9,9 +10,7 @@ const IndexPage = () => {
 		<body>
 			<Intro />
 
-			<div id="projects">
-				<h2>Projects coming soon</h2>
-			</div>
+			<Portfolio />
 
 			<div id="skills">
 				<div>
