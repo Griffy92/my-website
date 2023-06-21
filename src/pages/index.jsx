@@ -1,19 +1,13 @@
-import * as React from "react"
-import '../styles/index.scss'
+import * as React from "react";
+import '../styles/index.scss';
+import lighthouse from '../images/moonrise-kingdom.jpg';
+import Intro from '../components/intro/intro'
  
 const IndexPage = () => {
 
 	return (
 		<body>
-			<div id="intro">
-				<h1>Kia Ora, I'm Dom!</h1>
-				<h2>Software Engineer</h2>
-			</div>
-
-			<div id="about">
-				<p>I'm a career transitioner with a background in Account Management and Technical Operations in Ad-Tech. Through this role, I discovered coding and glimpsed it's elegance of doing things efficiently.</p>
-				<p>I nurtured this intrigue in a Software Engineer course with General Assembly, which I completed recently. This was a rewarding experience where I learnt alot but at the same time, humbled by how I'm only scratching the surface.</p>
-			</div>
+			<Intro />
 
 			<div id="projects">
 				<h2>Projects coming soon</h2>
@@ -51,6 +45,13 @@ const IndexPage = () => {
 
 			<div id="contact">
 				<h2>Contact me coming soon!</h2>
+			</div>
+
+			<div id="fun">
+				<p>
+					You scrolled all the way down! Here's a picture that I really like from the film Moonrise Kingdom.
+				</p>
+				<img src={ lighthouse } alt="Girl on Lighthouse from Moonrise Kingdom film" />
 			</div>
 
 		</body>
