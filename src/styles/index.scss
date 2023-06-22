@@ -63,7 +63,6 @@ body {
 
     .skills {
         display: flex;
-        
         justify-content: space-around;
         border: 1px solid red;
         flex-basis: 30%;
@@ -76,6 +75,34 @@ body {
         ul {
             border: 1px solid red;
             list-style: none;
+        }
+    }
+
+    .projects {
+        display: flex;
+        flex-basis: 70%;
+        overflow: hidden;
+
+        button {
+            color: red;
+            z-index: 1;
+            background-color: transparent;
+        }
+        
+        button:last-of-type {
+            color: red;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: nowrap;
+            position: relative;
+            transition-duration: .3s;
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+            }
         }
     }
 }

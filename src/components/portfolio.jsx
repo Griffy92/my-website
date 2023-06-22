@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Carousel from './carousel'
 
 const Portfolio = () => {
 
@@ -35,7 +36,7 @@ const Portfolio = () => {
             </div>
 
             <div className="projects">
-                <h3>Portfolio Carousel</h3>
+                <Carousel />
             </div>
 
         </div>
