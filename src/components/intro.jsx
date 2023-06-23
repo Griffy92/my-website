@@ -7,9 +7,7 @@ const Intro = () => {
 
             <div className="greeting">
                 <h1>Kia Ora, I'm Dom!</h1>
-                <h2>
-                    Software Engineer
-                </h2>
+                <h2>Software Engineer</h2>
             </div>
 
             <div className="about-me">
@@ -18,7 +16,7 @@ const Intro = () => {
                 </p>
 
                 <p>
-                    This led me to a Software Engineer course with General Assembly, which I completed recently. It was a rewarding experience where I learnt alot but at the same time, humbled by how I'm only just scratching the surface.
+                    This led me to a Software Engineer course with General Assembly, which I completed recently. It was a rewarding experience where I learnt a lot but at the same time, humbled by how I'm only just scratching the surface.
                 </p>
 
             </div>

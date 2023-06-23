@@ -6,7 +6,7 @@ const Skills = () => {
         <div id="skills">
             <div className="skills-list">
                 <div>
-                    <h3>Languages</h3>
+                    <h2>Languages</h2>
                     <ul>
                         <li>Javascript</li>
                         <li>Ruby</li>
@@ -15,7 +15,7 @@ const Skills = () => {
                     </ul>
                 </div>
                 <div>
-                    <h3>Frameworks</h3>
+                    <h2>Frameworks</h2>
                     <ul>
                         <li>React</li>
                         <li>Ruby on Rails</li>
@@ -24,7 +24,7 @@ const Skills = () => {
                     </ul>
                 </div>
                 <div>
-                    <h3>Tools</h3>
+                    <h2>Tools</h2>
                     <ul>
                         <li>Git</li>
                         <li>PostgreSQL</li>
