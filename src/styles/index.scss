@@ -65,7 +65,7 @@ body {
         display: flex;
         justify-content: space-around;
         border: 1px solid red;
-        flex-basis: 30%;
+        height: 30vh;
 
         h3 {
             border: 1px solid red;
@@ -80,29 +80,46 @@ body {
 
     .projects {
         display: flex;
-        flex-basis: 70%;
+        height: 70vh;
         overflow: hidden;
+        position: relative;
 
         button {
-            color: red;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             z-index: 1;
-            background-color: transparent;
+            width: 10%;
+            height: 100%;
+            border: none;
+            opacity: 0%;
+            font-size: 30px;
+        }
+        
+        button:hover {
+            opacity: 20%;
+        }
+        
+        button:first-of-type {
+            left: 0;
         }
         
         button:last-of-type {
-            color: red;
+            right: 0;
         }
-
+        
         .carousel {
             display: flex;
             overflow: nowrap;
             position: relative;
             transition-duration: .3s;
+            width: 100%;
 
             img {
                 max-width: 100%;
                 object-fit: cover;
             }
+
         }
     }
 }

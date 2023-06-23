@@ -1,9 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 
-const CarouselItem = ( {content, left, right} ) => {
+const CarouselItem = ( {content} ) => {
+
     return (
-        <>
-            <img src={ content.image } alt="" />
+        <>  
+            <img src={content.image} alt={content.name} />
         </>
     )
 }
