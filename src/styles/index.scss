@@ -5,7 +5,6 @@
     padding: 0;
     margin: 0;
     font-family: 'Mulish', sans-serif;
-
 }
 
 body {
@@ -58,84 +57,69 @@ body {
     }  
 }
 
-#portfolio {
+#skills {
     @include container;
 
-    .skills {
+    .learning {
         display: flex;
-        justify-content: space-around;
-        border: 1px solid red;
+        justify-content: center;
+        align-items: center;
         height: 30vh;
 
-        h3 {
-            border: 1px solid red;
-            margin-left: -.3em;
-        }
-    
-        ul {
-            border: 1px solid red;
-            list-style: none;
+        p {
+            margin: 1em 0em 1em 0em;
+            font-size: .8em;
         }
     }
 
-    .projects {
-        display: flex;
+    .skills-list {
         height: 70vh;
-        overflow: hidden;
-        position: relative;
-
-        button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-            width: 10%;
-            height: 100%;
-            border: none;
-            opacity: 0%;
-            font-size: 30px;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid red;
         
-        button:hover {
-            opacity: 20%;
-        }
-        
-        button:first-of-type {
-            left: 0;
-        }
-        
-        button:last-of-type {
-            right: 0;
-        }
-        
-        .carousel {
-            display: flex;
-            overflow: nowrap;
-            position: relative;
-            transition-duration: .3s;
-            width: 100%;
-
-            img {
-                max-width: 100%;
-                object-fit: cover;
+            h3 {
+                border: 1px solid red;
+                margin-left: -.3em;
             }
-
-        }
+        
+            ul {
+                border: 1px solid red;
+                list-style: none;
+            }
     }
+
+}
+
+.portfolio {
+    @include container;
+
+    .info  {
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        flex-direction: column;
+    }
+
+    
 }
 
 #contact {
     @include container;
-
+    
     .reach-out {
         flex-basis: 65%;
     }
-
+    
     .fun {
         display: flex;
         flex-direction: column;
         flex-basis: 35%;
-
+        
         img {
             width: 100%;
             object-fit: cover;
@@ -143,3 +127,45 @@ body {
     }
 }
 
+.flipcard-container {
+    border: 1px solid red;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .card {
+        height: 90%;
+        width: 90%;
+        position: relative;
+        transition: 1s;
+        transform-style: preserve-3d;
+        
+        .front, .back {
+            height: 100%;
+            width: 100%;
+            border-radius: 1em;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        
+        .front {
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .back {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgrey;
+            transform: rotateY(180deg) rotateZ(720deg);
+        }
+    }
+}
+
+.flipcard-container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(720deg);
+}
