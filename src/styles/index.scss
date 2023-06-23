@@ -12,7 +12,7 @@ body {
 }
 
 @mixin container {
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     border: 1px solid red;
@@ -104,28 +104,33 @@ body {
         height: 30vh;
         flex-direction: column;
     }
-
-    
 }
 
 #contact {
     @include container;
     
     .reach-out {
-        flex-basis: 65%;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     .fun {
         display: flex;
         flex-direction: column;
-        flex-basis: 35%;
+        height: 65vh;
         
         img {
-            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
     }
 }
+
+
+//////// Flipcard component ////////
 
 .flipcard-container {
     border: 1px solid red;
@@ -168,4 +173,12 @@ body {
 .flipcard-container:hover > .card {
     cursor: pointer;
     transform: rotateY(180deg) rotateZ(720deg);
+}
+
+//////// Contact Form Component ////////
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }

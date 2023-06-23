@@ -35,7 +35,7 @@ const Skills = () => {
             </div>
             
             <div className="learning">
-                <p>Currently, I'm learning xyz.</p>
+                <p>Currently, I'm interested in learning / am learning GraphQL, Go and ThreeJs. I also plan to complete the AWS certificate.</p>
             </div>
 
         </div>

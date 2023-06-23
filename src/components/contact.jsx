@@ -1,11 +1,12 @@
 import * as React from 'react';
 import lighthouse from '../images/moonrise-kingdom.jpg';
+import ContactForm from './contact-form';
 
 const Contact = () => {
     return (
         <div id="contact">
             <div className="reach-out">
-                <h2>Contact me coming soon!</h2>
+                <ContactForm />
             </div>
 
             <div className="fun">
