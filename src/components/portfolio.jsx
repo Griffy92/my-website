@@ -7,7 +7,7 @@ const Portfolio = () => {
     const generateProjects = () => {
         return projects.map((project) => {
             return (
-                <div className="portfolio" id="dynamic">
+                <div className="portfolio" id={project.name} key={project.name}>
                     <div className="info">
                         <h2>{project.name}</h2>
                         <p className="big-text">{project.tech}</p>

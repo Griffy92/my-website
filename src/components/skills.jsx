@@ -1,17 +1,17 @@
 import React from 'react';
-import { skills } from '../content/skills';
+import { skills, currentlyLearning } from '../content/skills';
 
 const Skills = () => {
 
     const generateSkills = () => {
         return Object.keys(skills).map( ( heading ) => {
             return (
-                <div>
+                <div key={heading}>
                     <h2>{heading}</h2>
                     <ul>
                         { skills[heading].map( (skill) => {
                             return (
-                                <li>{skill}</li>
+                                <li key={skill}>{skill}</li>
                             )
                         })}
                     </ul>
@@ -22,13 +22,15 @@ const Skills = () => {
 
     return (
         <div id="skills">
+            
             <div className="skills-list">
-                {generateSkills()}
+                { generateSkills() }
             </div>
             
             <div className="learning">
-                <p>Currently, I'm interested in learning / am learning GraphQL, Go and ThreeJs. I also plan to complete the AWS certificate.</p>
+                <p>{ currentlyLearning.text }</p>
             </div>
+
 
         </div>
     )
