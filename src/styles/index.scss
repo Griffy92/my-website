@@ -16,7 +16,7 @@
 $h1-size: 4em;
 $h2-size: 3em;
 $text-size: 1em;
-$big-text-size: 2em;
+$big-text-size: 1.5em;
 
 @mixin font-sizes {
     h1 {
@@ -57,12 +57,11 @@ $big-text-size: 2em;
         justify-content: center;
 
         h1 {
-            margin-top: 1em;
             text-align: start;
         }
         
         h2 {
-            margin-top: 1em;
+            margin-top: .5em;
             font-weight: 300;
             text-align: end;
         }
@@ -75,10 +74,7 @@ $big-text-size: 2em;
         p {
             margin: 1em 0em 1em 0em;
         }
-
-        p:first-of-type {
-            margin-top: 2em;
-        }
+        
     }  
 }
 
@@ -106,12 +102,10 @@ $big-text-size: 2em;
         border: 1px solid red;
         
             h3 {
-                border: 1px solid red;
                 margin-left: -.3em;
             }
         
             ul {
-                border: 1px solid red;
                 list-style: none;
             }
     }
@@ -120,14 +114,15 @@ $big-text-size: 2em;
 
 .portfolio {
     @include container;
+    @include font-sizes;
 
     .info  {
-        border: 1px solid red;
+        text-align: center;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 30vh;
         flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 35vh;
     }
 }
 
@@ -158,15 +153,14 @@ $big-text-size: 2em;
 //////// Flipcard component ////////
 
 .flipcard-container {
-    border: 1px solid red;
-    height: 70vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
     
     .card {
-        height: 90%;
-        width: 90%;
+        height: 95%;
+        width: 100%;
         position: relative;
         transition: 1s;
         transform-style: preserve-3d;
@@ -190,14 +184,14 @@ $big-text-size: 2em;
             justify-content: center;
             align-items: center;
             background-color: lightgrey;
-            transform: rotateY(180deg) rotateZ(720deg);
+            transform: rotateY(180deg) rotateZ(180deg);
         }
     }
 }
 
 .flipcard-container:hover > .card {
     cursor: pointer;
-    transform: rotateY(180deg) rotateZ(720deg);
+    transform: rotateY(180deg) rotateZ(180deg);
 }
 
 //////// Contact Form Component ////////

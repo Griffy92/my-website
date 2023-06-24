@@ -10,7 +10,7 @@ const Portfolio = () => {
                 <div className="portfolio" id="dynamic">
                     <div className="info">
                         <h2>{project.name}</h2>
-                        <p>Blurb coming soon</p>
+                        <p className="big-text">{project.tech}</p>
                     </div>
                     <Flipcard content={project} />
                 </div>
