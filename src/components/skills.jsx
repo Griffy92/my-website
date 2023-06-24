@@ -6,8 +6,8 @@ const Skills = () => {
     const generateSkills = () => {
         return Object.keys(skills).map( ( heading ) => {
             return (
-                <div key={heading}>
-                    <h2>{heading}</h2>
+                <div key={heading} className="skill">
+                    <h2 className="skill-h-size">{heading}</h2>
                     <ul>
                         { skills[heading].map( (skill) => {
                             return (
@@ -26,9 +26,10 @@ const Skills = () => {
             <div className="skills-list">
                 { generateSkills() }
             </div>
-            
+
             <div className="learning">
                 <p>{ currentlyLearning.text }</p>
+                <p className="big-text">See below for projects I've worked on.</p>
             </div>
 
 
