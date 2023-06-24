@@ -44,7 +44,6 @@ $big-text-size: 1.5em;
     height: 95vh;
     display: flex;
     flex-direction: column;
-    margin: 1em 0 1em 0;
 }
 
 #intro {
@@ -87,13 +86,18 @@ $big-text-size: 1.5em;
     @include font-sizes;
 
     .skills-list {
+        margin-top: 2em;
         height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        
-            h2 {
-                margin-left: -.3em;
+
+            ul {
+                margin: 0.7em 0 0.7em 1em;
+            }
+            
+            li {
+                padding: 0.1em;
             }
     }
 
