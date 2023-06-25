@@ -15,7 +15,6 @@ const Intro = () => {
                 <p>{ introContent.pTwo }</p>
             </div>
 
-
         </div>
     );
 };

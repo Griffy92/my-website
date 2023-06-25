@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Flipcard = ( {content} ) => {
     return (
@@ -8,7 +9,7 @@ const Flipcard = ( {content} ) => {
                 <div className="back">
                     <p>{content.desc}</p>
                     <p>{content.role}</p>
-                    {/* TODO: Add button or link to individual project page */}
+                    <Link to="/">Find out more about {content.name}</Link>
                 </div>
             </div>
         </div>
