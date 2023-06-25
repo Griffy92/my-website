@@ -6,7 +6,9 @@ const Flipcard = ( {content} ) => {
             <div className="card">
                 <div className="front" style={{ backgroundImage: `url(${content.image})`}}></div>
                 <div className="back">
-                    Back of card
+                    <p>{content.desc}</p>
+                    <p>{content.role}</p>
+                    {/* TODO: Add button or link to individual project page */}
                 </div>
             </div>
         </div>
