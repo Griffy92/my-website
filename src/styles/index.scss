@@ -182,9 +182,16 @@ $second-colour: #E8CBC0;
     }
 
     .socials {
-        button {
+        display: flex;
+        justify-content: center;
+
+        a {
             background-color:  transparent;
             border: none;
+        }
+
+        a:first-of-type {
+            margin-right: 1em;
         }
     }
     
