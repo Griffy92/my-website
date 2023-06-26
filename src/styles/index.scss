@@ -78,7 +78,6 @@ $screen-lg-min: 1200px;
 }
 
 @mixin container {
-    border: solid 1px red;
     height: 95vh;
     display: flex;
     flex-direction: column;
@@ -164,7 +163,6 @@ $screen-lg-min: 1200px;
             font-weight: bolder;
         }
     }
-
 
 }
 

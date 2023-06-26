@@ -9,7 +9,7 @@ const Flipcard = ( {content} ) => {
                 <div className="back">
                     <p>{content.desc}</p>
                     <p>{content.role}</p>
-                    <Link to="/">Find out more about {content.name}</Link>
+                    <a href={content.github} target="_blank">Find out more about {content.name}</a>
                 </div>
             </div>
         </div>
