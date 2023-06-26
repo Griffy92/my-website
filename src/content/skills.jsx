@@ -1,7 +1,7 @@
 export const skills = {
-    Languages: ['♪ Javascript', '♪ Ruby', '♪ HTML', '♪ CSS'],
-    Frameworks: ['♪ React', '♪ Rails', '♪ Gatsby', '♪ Tailwind'],
-    Tools: ['♪ Git', '♪ PostgresQL', '♪ Notion', '♪ Figma'],
+    Languages: ['○ Javascript', '○ Ruby', '○ HTML5', '○ CSS3', '○ SQL'], // Add SQL
+    Frameworks: ['○ React', '○ Rails', '○ Gatsby', '○ Tailwind'],
+    Tools: ['○ Git / Github', '○ PostgreSQL', '○ Notion', '○ Figma'],
 }
 
 export const currentlyLearning = {

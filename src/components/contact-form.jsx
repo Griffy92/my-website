@@ -7,7 +7,7 @@ const ContactForm = () => {
     const [ loading, setLoading ] = useState(true);
 
     // state.succeeded
-    if ( false ) {
+    if ( state.succeeded ) {
         return (
             <div className="fun">
                 <img src={ lighthouse } alt="Girl on Lighthouse from Moonrise Kingdom film" />
@@ -17,7 +17,7 @@ const ContactForm = () => {
 
     return (
         <div className="contact-form">  
-            <h2>Reach out!</h2>
+            <h2>Reach Out!</h2>
             <form onSubmit={ handleSubmit }>
                 <label htmlFor="full-name">Name:</label>
                 <input type="text" name="name" id="full-name" placeholder="Frank Ocean" required />

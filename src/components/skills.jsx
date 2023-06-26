@@ -28,7 +28,7 @@ const Skills = () => {
             </div>
 
             <div className="learning">
-                <p>{ currentlyLearning.text }</p>
+                {/* <p>{ currentlyLearning.text }</p> */}
                 <p className="big-text">See below for projects I've worked on.</p>
             </div>
 
