@@ -4,7 +4,6 @@ import lighthouse from '../images/moonrise-kingdom.jpg'
 
 const ContactForm = () => {
     const [ state, handleSubmit ] = useForm("mqkvzzwz");
-    const [ loading, setLoading ] = useState(true);
 
     // state.succeeded
     if ( state.succeeded ) {
