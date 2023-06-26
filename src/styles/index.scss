@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,700&display=swap');
 
+//////// Defaults ////////
 $h1-size: 4em;
 $h2-size: 3em;
 $text-size: 1em;
@@ -18,7 +19,23 @@ $screen-lg-min: 1200px;
     font-family: 'Mulish', sans-serif;
     list-style: none;
     text-decoration: none;
-    
+
+    h1 {
+        font-size: $h1-size;
+    }
+
+    h2 {
+        font-size: $h2-size;
+    }
+
+    p, a {
+        font-size: $text-size;
+    }
+
+    .big-text {
+        font-size: $big-text-size;
+    }
+
     body {
         max-width: 1440px;
         margin: 1em;
@@ -28,6 +45,7 @@ $screen-lg-min: 1200px;
     }
 }
 
+//////// Media Queries ////////
 @mixin md {
     @media ( min-width: #{$screen-md-min} ) {
         @content;
@@ -40,52 +58,57 @@ $screen-lg-min: 1200px;
     }
 }
 
-@mixin font-sizes {
-    h1 {
-        font-size: $h1-size;
-    }
-
-    h2 {
-        font-size :$h2-size;
-    }
-
-    p {
-        font-size: $text-size;
-    }
-
-    .big-text {
-        font-size: $big-text-size
-    }
+//////// Media Queries ////////
+@mixin container {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px red;
 
     @include md {
         h1 {
             font-size: calc($h1-size * 1.5);
+            width: 60%;
         }
         
         h2 {
-            font-size: calc($h2-size * 1.5);
-       
+            font-size: calc($h1-size * 1.5);
         }
 
-        p {
+        p, a {
             font-size: calc($text-size * 1.5);
         }
         
         .big-text {
             font-size: calc($big-text-size * 1.5);
         }
-    }
-}
 
-@mixin container {
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
+    }
+
+    @include lg {
+        h1 {
+            font-size: calc($h1-size * 2);
+            width: 50%;
+        }
+
+        h2 {
+            font-size: calc($h1-size * 2);
+            width: 50%;
+        }
+
+        p {
+            font-size: calc($text-size * 2);
+        }
+
+        .big-text {
+            font-size: calc($big-text-size * 2);
+        }
+
+    }
 }
 
 #intro {
     @include container;
-    @include font-sizes;
 
     .greeting, .about-me {
         display: flex;
@@ -114,13 +137,25 @@ $screen-lg-min: 1200px;
         p {
             margin: 1em 0em 1em 0em;
         }
+        
+        @include md {
+            display: flex;
+            flex-direction: row;
+
+            p {
+                width: 50%;
+            }
+
+            p:last-of-type {
+                align-self: flex-end;
+            }
+        }
 
     }  
 }
 
 #skills {
     @include container;
-    @include font-sizes;
 
     .skills-list {
         margin-top: 2em;
@@ -133,16 +168,23 @@ $screen-lg-min: 1200px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 2em;
 
             .skill-icon-container {
                 display: flex;
                 justify-content: flex-start;
-                margin-top: 1em;
+                margin-top: 2em;
         
                 .skill-icon {
                     width: 48px;
                     height: 48px;
                     margin: 0 5px 0 5px;
+
+                    @include md {
+                        width: 80px;
+                        height: 80px;
+                        margin: 0 10px 0 10px;
+                    }
                 }
             }
         }
@@ -168,7 +210,6 @@ $screen-lg-min: 1200px;
 
 .portfolio {
     @include container;
-    @include font-sizes;
 
     .info  {
         text-align: center;
@@ -182,7 +223,6 @@ $screen-lg-min: 1200px;
 
 #contact {
     @include container;
-    @include font-sizes;
     
     .reach-out {
         height: 80vh;
@@ -235,6 +275,10 @@ $screen-lg-min: 1200px;
         position: relative;
         transition: 1s;
         transform-style: preserve-3d;
+
+        @include md {
+            width: 70%;
+        }
         
         .front, .back {
             height: 100%;
@@ -272,7 +316,8 @@ $screen-lg-min: 1200px;
             a::after {
                 content: "";
                 position: absolute;
-                background: linear-gradient(45deg, $primary-colour, $second-colour);                height: 5px;
+                background: linear-gradient(45deg, $primary-colour, $second-colour);                
+                height: 5px;
                 width: 0%;
                 left: 0;
                 bottom: 0;
