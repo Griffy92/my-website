@@ -12,6 +12,19 @@ $screen-sm-min: 400px;
 $screen-md-min: 800px;
 $screen-lg-min: 1200px;
 
+//////// Media Queries ////////
+@mixin md {
+    @media ( min-width: #{$screen-md-min} ) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media ( min-width: #{$screen-lg-min} ) {
+        @content;
+    }
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -19,7 +32,7 @@ $screen-lg-min: 1200px;
     font-family: 'Mulish', sans-serif;
     list-style: none;
     text-decoration: none;
-
+ 
     h1 {
         font-size: $h1-size;
     }
@@ -35,26 +48,24 @@ $screen-lg-min: 1200px;
     .big-text {
         font-size: $big-text-size;
     }
-
-    body {
-        max-width: 1440px;
-        margin: 1em;
-        background: #E8CBC0;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, $primary-colour, $second-colour);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(45deg, $primary-colour, $second-colour); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    }
 }
 
-//////// Media Queries ////////
-@mixin md {
-    @media ( min-width: #{$screen-md-min} ) {
-        @content;
-    }
+// shifting bg gradient here removed the wierd duplicate bg with my containers
+html {
+    background: #E8CBC0;
+    background: -webkit-linear-gradient(to bottom, $primary-colour, $second-colour);
+    background: linear-gradient(45deg, $primary-colour, $second-colour);
 }
 
-@mixin lg {
-    @media ( min-width: #{$screen-lg-min} ) {
-        @content;
+body {
+    margin: 1em;
+ 
+    
+    @include lg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -63,7 +74,9 @@ $screen-lg-min: 1200px;
     height: 95vh;
     display: flex;
     flex-direction: column;
-    border: solid 1px red;
+    max-width: 1200px;
+    background-color: none;
+    border: none;
 
     @include md {
         h1 {
@@ -85,22 +98,23 @@ $screen-lg-min: 1200px;
     }
 
     @include lg {
+
         h1 {
-            font-size: calc($h1-size * 2);
+            font-size: calc($h1-size * 1.5);
             width: 50%;
         }
 
         h2 {
-            font-size: calc($h1-size * 2);
+            font-size: calc($h1-size * 1.5);
             width: 50%;
         }
 
         p, a, input, label, textarea, button {
-            font-size: calc($text-size * 2);
+            font-size: calc($text-size * 1.5);
         }
 
         .big-text {
-            font-size: calc($big-text-size * 2);
+            font-size: calc($big-text-size * 1.5);
         }
     }
 }
@@ -126,6 +140,22 @@ $screen-lg-min: 1200px;
             font-weight: 300;
             text-align: end;
         }
+
+        @include lg {
+            flex-direction: row;
+
+            h1 {
+                align-self: center;
+                text-align: center;
+                width: 45%;
+                margin-top: -.5em;
+            }
+
+            h2 {
+                align-self: flex-end;
+                text-align: center;
+            }
+        }
     }
 
     .about-me {
@@ -149,11 +179,28 @@ $screen-lg-min: 1200px;
             }
         }
 
+        @include lg {
+            align-items: center;
+
+            p {
+                width: 50%;
+                margin: 2em
+            }
+
+            p:first-of-type {
+                align-self: flex-start;
+                margin-top: -.5em
+            }
+        }
+
     }  
 }
 
 #skills {
     @include container;
+    @include lg {
+        flex-direction: row;
+    }
 
     .skills-list {
         margin-top: 2em;
@@ -161,6 +208,10 @@ $screen-lg-min: 1200px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        
+        @include lg {
+            justify-content: center;
+        }
 
         .skill-container {
             display: flex;
