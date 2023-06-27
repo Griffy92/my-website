@@ -75,7 +75,6 @@ body {
     flex-direction: column;
     max-width: 1200px;
     background-color: none;
-    border: solid 1px red;
 
     @include md {
         h1 {
@@ -332,6 +331,10 @@ body {
 
         a:first-of-type {
             margin-right: 1em;
+        }
+
+        a:hover {
+            margin-top: -1em;
         }
     }
     
