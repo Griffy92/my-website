@@ -21,7 +21,7 @@ export const projects = [
         tech: 'Gatsby ○ React',
         desc: 'This was created for our 1.5 day collabathon event with a team of four including 2 UX Designers and Software Engineers. Our brief was to create our own product development agency website.',
         role: 'My main contributions was the homepage components.',
-        github: 'https://github.com/Griffy92/online-shop-client',
+        github: 'https://github.com/Griffy92/Shift',
     }
 ]
 
