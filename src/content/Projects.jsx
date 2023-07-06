@@ -14,6 +14,14 @@ export const projects = [
         desc: 'This was our final project at GA and we decided to continue with our existing group. We wanted to challenge ourselves again and opted to do an e-commerce shop with the idea that this also translates well to our potential careers.',
         role: 'I continued my role as Git manager and my main contributions were implementing user functionality, integration with Stripe, checkout workflow and automated mailers.',
         github: 'https://github.com/Griffy92/online-shop-client',
+    },
+    {
+        name: 'Sh1ft',
+        image: 'https://i.imgur.com/45aMqSNh.png',
+        tech: 'Gatsby ○ React',
+        desc: 'This was created for our 1.5 day collabathon event with a team of four including 2 UX Designers and Software Engineers. Our brief was to create our own product development agency website.',
+        role: 'My main contributions was the homepage components.',
+        github: 'https://github.com/Griffy92/online-shop-client',
     }
 ]
 
