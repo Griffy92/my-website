@@ -11,6 +11,19 @@ $second-colour: #E8CBC0;
 $screen-sm-min: 400px;
 $screen-md-min: 800px;
 $screen-lg-min: 1200px;
+h1 {
+    font-size: $h1-size;
+}
+  
+h2 {
+    font-size: $h2-size;
+}
+
+p, a, input, label, textarea, button {
+    font-size: $text-size;
+}
+
+
 
 //////// Media Queries ////////
 @mixin md {
@@ -32,18 +45,6 @@ $screen-lg-min: 1200px;
     font-family: 'Mulish', sans-serif;
     list-style: none;
     text-decoration: none;
- 
-    h1 {
-        font-size: $h1-size;
-    }
-
-    h2 {
-        font-size: $h2-size;
-    }
-
-    p, a, input, label, textarea, button {
-        font-size: $text-size;
-    }
 
     .big-text {
         font-size: $big-text-size;
@@ -492,3 +493,37 @@ body {
     }
 }
 
+.social-icons-top {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1em;
+    gap: 1em;
+  
+    a {
+        transition: transform 0.3s;
+  
+        img {
+            width: 24px;
+            height: 24px;
+
+        @include md {
+            width: 32px;
+            height: 32px;
+        }
+
+        @include lg {
+            width: 40px;
+            height: 40px;
+        }
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+    }
+  
+    @include lg {
+      justify-content: center;
+      margin-top: 2em;
+    }
+}
